@@ -1,0 +1,63 @@
+version: '3.0'
+services:
+  php:
+    container_name: php
+    hostname: php
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: ./
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    environment:
+      MONGODB_URI: mongodb://root:6RHL8hKl2XmqKTmxeXOS@mongo:27017/?authSource=admin
+      POSTGRES_URL: pgsql://root:82fJ1z90aeRFAAhHTM1s@postgres:5432?charset=utf8
+      SSH_AUTH_SOCK: /ssh-agent
+    volumes:
+      - ${PWD}:/app
+      - ~/.bash_docker:/home/php/.bash_docker
+      - ~/.bash_history:/home/php/.bash_history
+      - ~/.gitconfig:/home/php/.gitconfig
+      - ~/.gitignore:/home/php/.gitignore
+      - ~/.zsh_docker:/home/php/.zsh_docker
+      - ~/.zsh_history:/home/php/.zsh_history
+      - $SSH_AUTH_SOCK:/ssh-agent
+    depends_on:
+      - mongo
+      - postgres
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  mongo:
+    container_name: mongo
+    hostname: mongo
+    image: mongo:5.0
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 6RHL8hKl2XmqKTmxeXOS
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./database/mongo:/data/db
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres:14
+    command: -c log_statement=all -c log_error_verbosity=VERBOSE
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 82fJ1z90aeRFAAhHTM1s
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./database/postgres:/var/lib/postgresql/data
+  nginx:
+    container_name: nginx
+    hostname: nginx
+    image: nginx
+    ports:
+      - '443:443'
+    volumes:
+      - ${PWD}:/app:ro
+      - ./docker/nginx:/etc/nginx/templates
+    depends_on:
+      - php
