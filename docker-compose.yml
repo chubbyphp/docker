@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   php:
-    container_name: php
+    container_name: chubbyphp-php
     hostname: php
     build:
       dockerfile: ./docker/php/Dockerfile
@@ -28,7 +28,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
   mongo:
-    container_name: mongo
+    container_name: chubbyphp-mongo
     hostname: mongo
     image: mongo:5.0
     environment:
@@ -37,9 +37,9 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - ./database/mongo:/data/db
+      - mongo:/data/db
   postgres:
-    container_name: postgres
+    container_name: chubbyphp-postgres
     hostname: postgres
     image: postgres:14
     command: -c log_statement=all -c log_error_verbosity=VERBOSE
@@ -49,9 +49,9 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./database/postgres:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
   nginx:
-    container_name: nginx
+    container_name: chubbyphp-nginx
     hostname: nginx
     image: nginx
     ports:
@@ -61,3 +61,7 @@ services:
       - ./docker/nginx:/etc/nginx/templates
     depends_on:
       - php
+
+volumes:
+  mongo:
+  postgres:
