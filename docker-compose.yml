@@ -14,7 +14,7 @@ services:
       POSTGRES_URL: pgsql://root:82fJ1z90aeRFAAhHTM1s@postgres:5432?charset=utf8
       SSH_AUTH_SOCK: /ssh-agent
     volumes:
-      - ${PWD}:/app
+      - ${PWD}/..:/app
       - ~/.bash_docker:/home/php/.bash_docker
       - ~/.bash_history:/home/php/.bash_history
       - ~/.gitconfig:/home/php/.gitconfig
