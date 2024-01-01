@@ -2,4 +2,4 @@
 
 ## Copyright
 
-2023 Dominik Zogg
+2024 Dominik Zogg
