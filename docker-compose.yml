@@ -57,7 +57,7 @@ services:
     ports:
       - '443:443'
     volumes:
-      - ${PWD}:/app:ro
+      - ${PWD}/..:/app:ro
       - ./docker/nginx:/etc/nginx/templates
     depends_on:
       - php
