@@ -11,7 +11,7 @@ services:
         GROUP_ID: ${GROUP_ID:-1000}
     environment:
       MONGODB_URI: mongodb://root:6RHL8hKl2XmqKTmxeXOS@mongo:27017/?authSource=admin
-      POSTGRES_URL: pgsql://root:82fJ1z90aeRFAAhHTM1s@postgres:5432?charset=utf8
+      POSTGRES_URL: pgsql://root:81fJ1z90aeRFAAhHTM1s@postgres:5432?charset=utf8
       SSH_AUTH_SOCK: /ssh-agent
     volumes:
       - ${PWD}/..:/app
@@ -45,7 +45,7 @@ services:
     command: -c log_statement=all -c log_error_verbosity=VERBOSE
     environment:
       POSTGRES_USER: root
-      POSTGRES_PASSWORD: 82fJ1z90aeRFAAhHTM1s
+      POSTGRES_PASSWORD: 81fJ1z90aeRFAAhHTM1s
     ports:
       - '5432:5432'
     volumes:
