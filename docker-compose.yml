@@ -29,7 +29,7 @@ services:
   mongo:
     container_name: chubbyphp-mongo
     hostname: mongo
-    image: mongo:6.0
+    image: mongo:7.0
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 6RHL8hKl2XmqKTmxeXOS
@@ -40,7 +40,7 @@ services:
   postgres:
     container_name: chubbyphp-postgres
     hostname: postgres
-    image: postgres:16
+    image: postgres:17
     command: -c log_statement=all -c log_error_verbosity=VERBOSE
     environment:
       POSTGRES_USER: root
