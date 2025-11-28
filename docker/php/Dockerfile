@@ -24,7 +24,7 @@ RUN dnf install -y --nobest \
     php83-php-pecl-mongodb \
     php83-php-pecl-pcov \
     php84-php-pecl-redis \
-    php83-php-pecl-swoole5 \
+    php83-php-pecl-swoole6 \
     php83-php-pecl-xdebug3 \
     php83-php-pecl-zip \
     php83-php-pgsql \
