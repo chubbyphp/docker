@@ -60,6 +60,10 @@ RUN groupadd -g ${GROUP_ID} php \
 
 USER php
 
+WORKDIR /home/php
+
+RUN curl -fsSL https://opencode.ai/install | bash -s -- --no-modify-path
+
 WORKDIR /app
 
 CMD /usr/bin/supervisord
