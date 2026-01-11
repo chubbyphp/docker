@@ -19,6 +19,7 @@ services:
       - ~/.gitconfig:/home/php/.gitconfig
       - ~/.gitignore:/home/php/.gitignore
       - ~/.local/share/opencode/auth.json:/home/php/.local/share/opencode/auth.json
+      - ~/.ssh/github.pub:/home/php/.ssh/github.pub
       - ~/.zsh_docker:/home/php/.zsh_docker
       - ~/.zsh_history:/home/php/.zsh_history
       - $SSH_AUTH_SOCK:/ssh-agent
