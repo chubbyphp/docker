@@ -1,3 +1,4 @@
+name: chubbyphp
 services:
   php:
     container_name: chubbyphp-php
