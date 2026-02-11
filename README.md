@@ -27,7 +27,7 @@ mkdir -p ~/.local/share/opencode
 
 ```sh
 mkdir -p ~/.ssh
-touch github.pub
+touch ~/.ssh/github.pub
 ```
 
 ### zsh
