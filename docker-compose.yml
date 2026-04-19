@@ -33,6 +33,7 @@ services:
     container_name: chubbyphp-mongo
     hostname: chubbyphp-mongo
     image: mongo:8
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 6RHL8hKl2XmqKTmxeXOS
