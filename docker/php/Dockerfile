@@ -16,13 +16,16 @@ RUN dnf install -y --nobest \
     php82-php-cli \
     php82-php-devel \
     php82-php-fpm \
+    php82-php-gd \
     php82-php-intl \
     php82-php-mbstring \
     php82-php-opcache \
+    php82-php-pecl-amqp \
     php82-php-pecl-apcu \
     php82-php-pecl-memcached \
     php82-php-pecl-mongodb \
     php82-php-pecl-pcov \
+    php82-php-pecl-rdkafka6 \
     php82-php-pecl-redis \
     php82-php-pecl-swoole6 \
     php82-php-pecl-xdebug3 \
