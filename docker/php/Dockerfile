@@ -16,13 +16,16 @@ RUN dnf install -y --nobest \
     php84-php-cli \
     php84-php-devel \
     php84-php-fpm \
+    php84-php-gd \
     php84-php-intl \
     php84-php-mbstring \
     php84-php-opcache \
+    php84-php-pecl-amqp \
     php84-php-pecl-apcu \
     php84-php-pecl-memcached \
     php84-php-pecl-mongodb \
     php84-php-pecl-pcov \
+    php84-php-pecl-rdkafka6 \
     php84-php-pecl-redis \
     php84-php-pecl-swoole6 \
     php84-php-pecl-xdebug3 \
