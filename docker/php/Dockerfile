@@ -12,28 +12,28 @@ RUN dnf install -y --nobest \
     langpacks-de \
     libatomic \
     nmap-ncat \
-    php82-php-ast \
-    php82-php-bcmath \
-    php82-php-cli \
-    php82-php-devel \
-    php82-php-fpm \
-    php82-php-gd \
-    php82-php-intl \
-    php82-php-mbstring \
-    php82-php-opcache \
-    php82-php-pecl-amqp \
-    php82-php-pecl-apcu \
-    php82-php-pecl-memcached \
-    php82-php-pecl-mongodb \
-    php82-php-pecl-pcov \
-    php82-php-pecl-rdkafka6 \
-    php82-php-pecl-redis \
-    php82-php-pecl-swoole6 \
-    php82-php-pecl-xdebug3 \
-    php82-php-pecl-zip \
-    php82-php-pgsql \
-    php82-php-sodium \
-    php82-php-xml \
+    php81-php-ast \
+    php81-php-bcmath \
+    php81-php-cli \
+    php81-php-devel \
+    php81-php-fpm \
+    php81-php-gd \
+    php81-php-intl \
+    php81-php-mbstring \
+    php81-php-opcache \
+    php81-php-pecl-amqp \
+    php81-php-pecl-apcu \
+    php81-php-pecl-memcached \
+    php81-php-pecl-mongodb \
+    php81-php-pecl-pcov \
+    php81-php-pecl-rdkafka6 \
+    php81-php-pecl-redis \
+    php81-php-pecl-swoole6 \
+    php81-php-pecl-xdebug3 \
+    php81-php-pecl-zip \
+    php81-php-pgsql \
+    php81-php-sodium \
+    php81-php-xml \
     procps-ng \
     sudo \
     supervisor \
@@ -41,9 +41,9 @@ RUN dnf install -y --nobest \
     vim \
     zsh
 
-RUN ln -sf /usr/bin/php82 /usr/bin/php \
-    && rm /etc/opt/remi/php82/php.d/15-xdebug.ini \
-    && rm /etc/opt/remi/php82/php.d/40-pcov.ini
+RUN ln -sf /usr/bin/php81 /usr/bin/php \
+    && rm /etc/opt/remi/php81/php.d/15-xdebug.ini \
+    && rm /etc/opt/remi/php81/php.d/40-pcov.ini
 
 ENV TZ=Europe/Zurich
 
