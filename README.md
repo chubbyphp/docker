@@ -30,6 +30,15 @@ mkdir -p ~/.ssh
 touch github.pub
 ```
 
+### claude - coding agent
+
+```sh
+mkdir -p ~/.claude
+[ ! -f ~/.claude.json ] && echo '{}' > ~/.claude.json
+[ ! -f ~/.claude/.credentials.json ] && echo '{}' > ~/.claude/.credentials.json
+[ ! -f ~/.claude/settings.json ] && echo '{}' > ~/.claude/settings.json
+```
+
 ### opencode - coding agent
 
 ```sh

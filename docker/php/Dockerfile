@@ -82,6 +82,10 @@ RUN source ~/.bashrc \
     && npm install -g @earendil-works/pi-coding-agent \
     && mkdir -p "$HOME/.pi/agent"
 
+RUN source ~/.bashrc \
+    && npm install -g  @anthropic-ai/claude-code \
+    && mkdir -p "$HOME/.claude"
+
 WORKDIR /app
 
 CMD /usr/bin/supervisord
