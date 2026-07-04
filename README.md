@@ -33,8 +33,8 @@ touch github.pub
 ### claude - coding agent
 
 ```sh
-mkdir -p ~/.claude
 [ ! -f ~/.claude.json ] && echo '{}' > ~/.claude.json
+mkdir -p ~/.claude
 [ ! -f ~/.claude/.credentials.json ] && echo '{}' > ~/.claude/.credentials.json
 [ ! -f ~/.claude/settings.json ] && echo '{}' > ~/.claude/settings.json
 ```
