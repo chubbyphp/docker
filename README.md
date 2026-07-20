@@ -39,6 +39,16 @@ mkdir -p ~/.claude
 [ ! -f ~/.claude/settings.json ] && echo '{}' > ~/.claude/settings.json
 ```
 
+### codex - coding agent
+
+```sh
+mkdir -p ~/.codex
+[ ! -f ~/.codex/auth.json ] && echo '{}' > ~/.codex/auth.json
+[ ! -f ~/.codex/config.toml ] && echo 'approval_policy = "never"\nsandbox_mode = "danger-full-access"\napprovals_reviewer = "user"\n\n[projects."/app"]\ntrust_level = "trusted"\n\n[notice]\nhide_full_access_warning = true' > ~/.codex/config.toml
+chmod 600 ~/.codex/auth.json
+chmod 600 ~/.codex/config.toml
+```
+
 ### opencode - coding agent
 
 ```sh
