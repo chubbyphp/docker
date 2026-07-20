@@ -78,6 +78,10 @@ RUN source ~/.bashrc \
     && mkdir -p "$HOME/.claude"
 
 RUN source ~/.bashrc \
+    && npm install -g @openai/codex \
+    && mkdir -p "$HOME/.codex"
+
+RUN source ~/.bashrc \
     && npm install -g opencode-ai@latest \
     && mkdir -p "$HOME/.config/opencode" \
     && mkdir -p "$HOME/.local/share/opencode"
