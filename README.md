@@ -30,7 +30,9 @@ mkdir -p ~/.ssh
 touch github.pub
 ```
 
-### claude - coding agent
+### Coding agents
+
+#### Claude
 
 ```sh
 if [ ! -f ~/.claude.json ]; then
@@ -67,7 +69,7 @@ chmod 600 \
     ~/.claude/settings.json
 ```
 
-### codex - coding agent
+#### Codex
 
 ```sh
 mkdir -p ~/.codex
@@ -97,7 +99,7 @@ chmod 600 \
     ~/.codex/config.toml
 ```
 
-### opencode - coding agent
+#### Opencode
 
 ```sh
 mkdir -p ~/.config/opencode ~/.local/share/opencode
@@ -133,7 +135,7 @@ chmod 600 \
     ~/.local/share/opencode/auth.json
 ```
 
-### pi - coding agent
+#### PI
 
 ```sh
 mkdir -p ~/.pi/agent
