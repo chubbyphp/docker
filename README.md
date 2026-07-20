@@ -36,7 +36,9 @@ touch github.pub
 [ ! -f ~/.claude.json ] && echo '{}' > ~/.claude.json
 mkdir -p ~/.claude
 [ ! -f ~/.claude/.credentials.json ] && echo '{}' > ~/.claude/.credentials.json
-[ ! -f ~/.claude/settings.json ] && echo '{}' > ~/.claude/settings.json
+[ ! -f ~/.claude/settings.json ] && echo '{\n  "fileCheckpointingEnabled": false,\n  "permissions": {\n    "defaultMode": "bypassPermissions"\n  },\n  "skipDangerousModePermissionPrompt": true,\n  "spinnerTipsEnabled": false,\n  "switchModelsOnFlag": false,\n  "theme": "auto"\n}' > ~/.claude/settings.json
+chmod 600 ~/.claude/.credentials.json
+chmod 600 ~/.claude/settings.json
 ```
 
 ### codex - coding agent
