@@ -14,6 +14,7 @@ services:
       MONGODB_URI: mongodb://root:6RHL8hKl2XmqKTmxeXOS@mongo:27017/?authSource=admin
       POSTGRES_URL: pgsql://root:82fJ1z90aeRFAAhHTM1s@postgres:5432?charset=utf8
       SSH_AUTH_SOCK: /ssh-agent
+      LLAMA_BASE_URL: http://host.docker.internal:9931/v1
     volumes:
       - ${PWD}/..:/app
       - $SSH_AUTH_SOCK:/ssh-agent
