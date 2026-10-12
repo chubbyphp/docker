@@ -24,7 +24,7 @@ RUN dnf install -y --nobest \
     php84-php-pecl-amqp \
     php84-php-pecl-apcu \
     php84-php-pecl-memcached \
-    php84-php-pecl-mongodb \
+    php84-php-pecl-mongodb2 \
     php84-php-pecl-pcov \
     php84-php-pecl-rdkafka6 \
     php84-php-pecl-redis \
