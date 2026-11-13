@@ -16,7 +16,6 @@ RUN dnf install -y --nobest \
     php85-php-bcmath \
     php85-php-cli \
     php85-php-devel \
-    php85-php-fpm \
     php85-php-gd \
     php85-php-intl \
     php85-php-mbstring \
@@ -36,7 +35,6 @@ RUN dnf install -y --nobest \
     php85-php-xml \
     procps-ng \
     sudo \
-    supervisor \
     unzip \
     vim \
     zsh
@@ -93,4 +91,4 @@ RUN source ~/.bashrc \
 
 WORKDIR /app
 
-CMD /usr/bin/supervisord
+CMD ["/bin/bash", "-c", "trap 'exit 0' TERM INT; sleep infinity & wait"]
