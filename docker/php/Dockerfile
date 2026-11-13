@@ -25,9 +25,9 @@ RUN dnf install -y --nobest \
     php86-php-pecl-memcached \
     php86-php-pecl-mongodb2 \
     php86-php-pecl-pcov \
-    php86-php-pecl-rdkafka6 \
+    #php86-php-pecl-rdkafka6 \
     php86-php-pecl-redis \
-    php86-php-pecl-swoole6 \
+    #php86-php-pecl-swoole6 \
     php86-php-pecl-xdebug3 \
     php86-php-pecl-zip \
     php86-php-pgsql \
