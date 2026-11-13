@@ -12,36 +12,36 @@ RUN dnf install -y --nobest \
     langpacks-de \
     libatomic \
     nmap-ncat \
-    php85-php-ast \
-    php85-php-bcmath \
-    php85-php-cli \
-    php85-php-devel \
-    php85-php-gd \
-    php85-php-intl \
-    php85-php-mbstring \
-    php85-php-opcache \
-    php85-php-pecl-amqp \
-    php85-php-pecl-apcu \
-    php85-php-pecl-memcached \
-    php85-php-pecl-mongodb2 \
-    php85-php-pecl-pcov \
-    php85-php-pecl-rdkafka6 \
-    php85-php-pecl-redis \
-    php85-php-pecl-swoole6 \
-    php85-php-pecl-xdebug3 \
-    php85-php-pecl-zip \
-    php85-php-pgsql \
-    php85-php-sodium \
-    php85-php-xml \
+    php86-php-ast \
+    php86-php-bcmath \
+    php86-php-cli \
+    php86-php-devel \
+    php86-php-gd \
+    php86-php-intl \
+    php86-php-mbstring \
+    php86-php-opcache \
+    php86-php-pecl-amqp \
+    php86-php-pecl-apcu \
+    php86-php-pecl-memcached \
+    php86-php-pecl-mongodb2 \
+    php86-php-pecl-pcov \
+    php86-php-pecl-rdkafka6 \
+    php86-php-pecl-redis \
+    php86-php-pecl-swoole6 \
+    php86-php-pecl-xdebug3 \
+    php86-php-pecl-zip \
+    php86-php-pgsql \
+    php86-php-sodium \
+    php86-php-xml \
     procps-ng \
     sudo \
     unzip \
     vim \
     zsh
 
-RUN ln -sf /usr/bin/php85 /usr/bin/php \
-    && rm /etc/opt/remi/php85/php.d/15-xdebug.ini \
-    && rm /etc/opt/remi/php85/php.d/40-pcov.ini
+RUN ln -sf /usr/bin/php86 /usr/bin/php \
+    && rm /etc/opt/remi/php86/php.d/15-xdebug.ini \
+    && rm /etc/opt/remi/php86/php.d/40-pcov.ini
 
 ENV TZ=Europe/Zurich
 

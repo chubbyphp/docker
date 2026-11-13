@@ -16,10 +16,10 @@ alias ln='ln -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-alias xdebug-on='echo "zend_extension=xdebug.so" | sudo tee /etc/opt/remi/php85/php.d/15-xdebug.ini'
-alias xdebug-off='sudo rm /etc/opt/remi/php85/php.d/15-xdebug.ini'
-alias pcov-on='echo "extension=pcov.so" | sudo tee /etc/opt/remi/php85/php.d/40-pcov.ini'
-alias pcov-off='sudo rm /etc/opt/remi/php85/php.d/40-pcov.ini'
+alias xdebug-on='echo "zend_extension=xdebug.so" | sudo tee /etc/opt/remi/php86/php.d/15-xdebug.ini'
+alias xdebug-off='sudo rm /etc/opt/remi/php86/php.d/15-xdebug.ini'
+alias pcov-on='echo "extension=pcov.so" | sudo tee /etc/opt/remi/php86/php.d/40-pcov.ini'
+alias pcov-off='sudo rm /etc/opt/remi/php86/php.d/40-pcov.ini'
 
 # Reset per-harness state to the image baseline, keeping only what docker-compose.yml bind-mounts
 # (plus, for pi, the packages baked into the image by the Dockerfile).
