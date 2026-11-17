@@ -61,7 +61,7 @@ services:
   postgres:
     container_name: chubbyphp-postgres
     hostname: chubbyphp-postgres
-    image: postgres:17
+    image: postgres:18
     command: -c log_statement=all -c log_error_verbosity=VERBOSE
     environment:
       POSTGRES_USER: root
@@ -69,7 +69,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql
   nginx:
     container_name: chubbyphp-nginx
     hostname: chubbyphp-nginx
